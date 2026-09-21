@@ -1,81 +1,128 @@
-.product-card {
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.card {
+  box-sizing: border-box;
   width: 200px;
-  padding: 33px 15px 24px;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  background-color: #fff;
   display: flex;
   flex-direction: column;
-  font-family: $main-font;
+  font-family: Roboto, sans-serif;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease;
+
+  &:hover {
+    box-shadow: none;
+    border-color: #00aeef;
+  }
 
   &__image {
+    display: block;
     width: 160px;
     height: 134px;
     object-fit: contain;
-    margin-bottom: 40px;
-    align-self: center;
+    margin: 32px auto 40px;
   }
 
   &__title {
-    width: 170px;
-    height: 36px;
-    font-size: 13px;
+    color: #060b35;
+    margin: 0 16px 4px;
+    width: 166px;
+    height: auto;
+    font-family: Roboto, sans-serif;
+    font-weight: 500;
+    font-size: 12px;
     line-height: 18px;
-    color: $color-text-main;
-    margin-bottom: 4px;
-    overflow: hidden;
+    letter-spacing: 0%;
   }
 
   &__code {
-    font-size: 11px;
-    color: $color-text-muted;
-    margin-bottom: 16px;
+    width: 98px;
+    height: 14px;
+    margin: 0 16px 16px;
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 16px;
+    letter-spacing: 0%;
+    color: #616070;
   }
 
   &__rating-row {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 24px;
+    margin: 0 16px 26px;
+    height: 16px;
   }
 
   &__reviews {
-    font-size: 11px;
-    color: $color-text-muted;
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 16px;
+    color: #616070;
   }
 
   &__price-row {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0;
     margin-bottom: 16px;
+    height: 24px;
   }
 
   &__price-label {
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
     font-size: 12px;
-    color: $color-text-muted;
+    line-height: 18px;
+    letter-spacing: 0%;
+    margin-left: 16px;
+    color: #616070;
   }
 
   &__price-value {
-    font-size: 16px;
+    font-family: Roboto, sans-serif;
     font-weight: 700;
-    color: $color-text-main;
+    font-size: 16px;
+    color: #060b35;
+    margin-right: 16px;
   }
 
   &__button {
-    display: block;
-    text-align: center;
-    background-color: $color-button;
-    color: #fff;
-    text-decoration: none;
-    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 168px;
+    font-family: Roboto, sans-serif;
     font-weight: 700;
-    padding: 10px;
-    border: 1px solid $color-button;
+    font-size: 14px;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+    background-color: #00aeef;
+    margin: 0 16px 16px;
+    transition: all 0.3s ease;
+    border: 1px solid #00aeef;
     border-radius: 5px;
-    transition: all 0.2s ease;
 
-    &:hover {
+    .card:hover & {
       background-color: transparent;
-      border-color: $color-button;
-      color: $color-button;
+      border-color: #00aeef;
+      color: #00aeef;
     }
   }
 }
